@@ -1,0 +1,6 @@
+typer==0.7.0
+openapi_spec_validator==0.5.5
+aiohttp==3.7.3
+asyncio==3.4.
+
+

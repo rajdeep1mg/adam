@@ -1,0 +1,6 @@
+git+ssh://git@bitbucket.org/tata1mg/torpedo.git@3.0.3-alpha
+git+ssh://git@bitbucket.org/tata1mg/commonutils.git@1.4.1
+git+ssh://git@bitbucket.org/tata1mg/1mgmodels.git@v1.9.1
+git+ssh://git@bitbucket.org/tata1mg/cache_wrapper.git@2.2.2
+aiokafka==0.7.2
+pre-commit==2.20.0

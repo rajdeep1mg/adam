@@ -1,0 +1,5 @@
+git+ssh://git@bitbucket.org/tata1mg/torpedo.git@adam_listener_sanic_upgrade
+git+ssh://git@bitbucket.org/tata1mg/commonutils.git@1.4.1
+git+ssh://git@bitbucket.org/tata1mg/1mgmodels.git@v1.9.1
+git+ssh://git@bitbucket.org/tata1mg/cache_wrapper.git@2.2.2
+aiokafka==0.7.2

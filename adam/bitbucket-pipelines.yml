@@ -1,0 +1,16 @@
+image: python:3.8
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Installing Dependencies
+          caches:
+            - pip
+          script:
+            - pip install -r requirements/base.txt
+      - step:
+          name: Lint Check
+          script:
+            - pip install black
+            # Enforce style consistency across Python projects https://flake8.pycqa.org/en/latest/manpage.html
+            - black . --check

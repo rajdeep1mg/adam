@@ -1,0 +1,80 @@
+{
+  "NAME": "adam",
+  "HTTP_VERSION": "1.0.0",
+  "HOST": "0.0.0.0",
+  "PORT": 8081,
+  "WORKERS": 2,
+  "DEBUG": true,
+  "INTER_SERVICE_TIMEOUT": 60,
+  "REDIS_HOST": "localhost",
+  "REDIS_PORT": 6379,
+  "IS_BACKGROUND_WORKER_ENABLED": true,
+  "IS_KAFKA_ENABLED": true,
+  "SQS": {
+    "SQS_REGION": "ap-south-1",
+    "SUBSCRIBE": {
+      "PRODUCT_CATALOG_SYNC": {
+        "ENABLED": true,
+        "QUEUE_NAME": ""
+      }
+    },
+    "PUBLISH": {
+      "PRODUCT_CATALOG_SYNC": {
+        "ENABLED": true,
+        "QUEUE_NAME": ""
+      }
+    }
+  },
+  "APM": {
+  "ENVIRONMENT": "local",
+  "ENABLED": false,
+  "SERVER_TIMEOUT": "30s",
+  "SPAN_FRAMES_MIN_DURATION": "10ms",
+  "TRANSACTION_SAMPLE_RATE": 0.1
+  },
+  "ONLINESALES": {
+    "TIMEOUT": 2,
+    "CREDENTIALS" : {
+      "TOKEN" : "",
+      "CLIENT_ID" : "",
+      "X_UBID": ""
+    },
+    "API_URLS" : {
+      "PRODUCT_CATALOG_SYNC": "",
+      "REGISTER_AD_CLICK": "",
+      "REGISTER_AD_IMPRESSION": "",
+      "FETCH_BRAND_ADS" : "",
+      "REGISTER_EVENTS" : "",
+      "FETCH_SPONSORED_ADS": "",
+      "USER_TAG_KEYS": "",
+      "USER_TAG_VALUES": ""
+    }
+  },
+  "KAFKA" : {
+    "HOST" :"",
+    "GROUP_ID" : "",
+    "WEB_QUEUE_NAME" : "",
+    "ANDROID_QUEUE_NAME": ""
+  },
+  "SEARCH": {
+    "HOST":"http://search.1mginfra.com:90",
+    "TIMEOUT": 2
+  },
+  "S3": {
+    "BANNER_UPLOAD_BUCKET_NAME" : "",
+    "OS_UDP_DATA_SYNC_BUCKET": ""
+  },
+  "SENTRY": {
+    "DSN": "",
+    "EM": "",
+    "ENVIRONMENT": ""
+  },
+  "REDIS_CACHE_HOSTS": {
+    "ads_service": {
+      "LABEL": "global",
+      "REDIS_HOST": "pharma-redis-master.{{ env_name }}.svc.{{ cluster_domain }}",
+      "REDIS_PORT": 6379
+    }
+  },
+  "TTL_DNS_CACHE": 200
+}
